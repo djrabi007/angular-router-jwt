@@ -1,0 +1,12 @@
+<p>registration works!</p>
+
+<div style="text-align: center">
+    <h1>{{message123}}</h1> 
+</div>
+
+Name--------><input type="text" name="name" [(ngModel)]="userReg.name">  <br>
+email--------><input type="text" name="email" [(ngModel)]="userReg.email"> <br>
+experience--><input type="text" name="experience" [(ngModel)]="userReg.experience"> <br>
+domain------><input type="text" name="domain" [(ngModel)]="userReg.domain"> <br>
+             <input type="submit" name="submit_reg"  
+   vlaue="Register" (click)="registerNow()"> 

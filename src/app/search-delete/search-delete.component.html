@@ -1,0 +1,35 @@
+<p>search-delete works!</p>
+<div>
+    <input type="text" name="email" [(ngModel)]="email"/>
+    <input type="button" value="SEARCH by Email" (click)="finUserByEmailId()"/>
+
+</div>
+
+<div class="container">
+        <table class="table table-striped">
+          <thead>
+               <tr>
+                   <th>Id</th>
+                   <th>Name</th>
+                   <th>Email</th>
+                    <th>Experience</th>
+                    <th>Domain</th>
+                    <th>Action(Delete?)</th>
+               </tr>
+           </thead> 
+           <tbody>
+               <tr *ngFor="let usr of usersRabi">
+                   <td>{{usr.id}}</td>
+                   <td>{{usr.name}}</td>
+                   <td>{{usr.email}}</td>
+                   <td>{{usr.experience}}</td>
+                   <td>{{usr.domain}}</td>
+                   <td><input type="button" value="DELETE" (click)="deleteUser(usr.id)"/></td>
+               </tr>
+            </tbody>    
+       
+       
+       
+        </table>
+       </div>
+       
