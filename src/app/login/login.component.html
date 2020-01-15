@@ -1,0 +1,9 @@
+<p>login works!</p>
+<li><a  routerLink="/person" >Person</a></li>
+  
+<!-- <form  action="/login" method="POST"> -->
+<form id="accesspanel" action="">
+        <input type="text" name="username" [(ngModel)]="username" id="email" placeholder="username">
+  <input type="password" name="password" [(ngModel)]="password" id="password" placeholder="password">
+   <input type="submit" name="Login" id="go" value="Login" (click)="doLogin()">                 
+</form>

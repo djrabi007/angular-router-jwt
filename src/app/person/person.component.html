@@ -1,0 +1,20 @@
+<p>person works!</p>
+<input type="button"  value="Find User" (click)="getUsersRR()" />
+.....    <a href="#" ng-click="$event.preventDefault();doLogout()">Logout/Back</a>
+<!-- ......<input type="button"  value="Logout" (click)="doLogout()" /> -->
+<p></p>
+<table>
+    <tr>
+        <th> Id</th>
+        <th> Name</th>
+        <th> Email</th>
+        <th> Mobile</th>
+    </tr>
+    <tr *ngFor="let userR of userLst">
+        <td> {{userR.id}}</td>
+        <td> {{userR.name}}</td>
+        <td> {{userR.email}}</td>
+        <td> {{userR.mobile}}</td>
+    </tr>
+
+</table>

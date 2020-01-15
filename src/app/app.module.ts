@@ -12,7 +12,13 @@ import { TechComponent } from './tech/tech.component';
 import { RegistrationComponent } from './registration/registration.component';
 import { SearchDeleteComponent } from './search-delete/search-delete.component';
 import { FormsModule } from '@angular/forms';
-import { HttpClientModule } from '@angular/common/http';
+import { HttpClientModule, HTTP_INTERCEPTORS } from '@angular/common/http';
+import { GarageComponentComponent } from './garage-component/garage-component.component';
+import { LoginComponent } from './login/login.component';
+import { PersonComponent } from './person/person.component';
+import { BasicAuthHttpInterceptorServiceService } from './basic-auth-http-interceptor-service.service';
+import { provideRoutes } from '@angular/router';
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -23,7 +29,10 @@ import { HttpClientModule } from '@angular/common/http';
     HomeComponent,
     TechComponent,
     RegistrationComponent,
-    SearchDeleteComponent
+    SearchDeleteComponent,
+    GarageComponentComponent,
+    LoginComponent,
+    PersonComponent
   ],
   imports: [
     BrowserModule,
@@ -31,7 +40,14 @@ import { HttpClientModule } from '@angular/common/http';
     FormsModule,
     HttpClientModule
   ],
-  providers: [],
+  providers: [
+    // For Spring Security only (Login,Person)
+    {
+    provide:HTTP_INTERCEPTORS,
+    useClass:BasicAuthHttpInterceptorServiceService,
+    multi:true
+    }
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

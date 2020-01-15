@@ -1,7 +1,8 @@
 <p>search-delete works!</p>
 <div>
     <input type="text" name="email" [(ngModel)]="email"/>
-    <input type="button" value="SEARCH by Email" (click)="finUserByEmailId()"/>
+    <input type="button" value="SEARCH by Email" 
+                             (click)="finUserByEmailId()"/>
 
 </div>
 
@@ -24,7 +25,8 @@
                    <td>{{usr.email}}</td>
                    <td>{{usr.experience}}</td>
                    <td>{{usr.domain}}</td>
-                   <td><input type="button" value="DELETE" (click)="deleteUser(usr.id)"/></td>
+                   <td><input type="button" value="DELETE"
+                                 (click)="deleteUser(usr.id)"/></td>
                </tr>
             </tbody>    
        
