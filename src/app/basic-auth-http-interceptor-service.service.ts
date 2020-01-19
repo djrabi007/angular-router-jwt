@@ -12,7 +12,6 @@ export class BasicAuthHttpInterceptorServiceService
   intercept(req:HttpRequest<any>,next:HttpHandler){
    // let SECRET_VAL= 'basicAuth';  //N-1 WITHOUT JWT (Intercept only)
     let SECRET_VAL= 'token';        // N-2 WITH JWT (+Interceptor) 
-
     if(sessionStorage.getItem('username')
        && sessionStorage.getItem(SECRET_VAL) ){
         req= req.clone(
