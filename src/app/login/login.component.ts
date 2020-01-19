@@ -21,6 +21,9 @@ export class LoginComponent implements OnInit {
     resp.subscribe(data=>{
       this.message=data;
       console.log("****"+data); 
+      let tokenStr= 'Bearer '+data;
+      sessionStorage.setItem('token', tokenStr);
+      sessionStorage.setItem('username',this.username);
       this.router.navigate(["/person"]);
     })
     

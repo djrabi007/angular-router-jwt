@@ -8,8 +8,16 @@ import { map } from 'rxjs/operators';
 export class RestapiService {
 
   constructor(private http:HttpClient) { }
+
+//*******N-3 Basant- 19thJan2020 WITH JWT (+Interceptor)  ************
+public login(userName:string,password:string) {
+  let jwtURL ='http://localhost:8081/authenticate';
+return this.http.post<any>(jwtURL,{userName,password},{responseType:'text' as 'json'});
+}
+
+
 //*******N-2 WITH JWT (+Interceptor)  ************
-    public login(username:string,password:string) {
+  /*  public login(username:string,password:string) {
       let jwtURL ='http://localhost:8081/authenticate';
     return this.http.post<any>(jwtURL,{username,password}).pipe(
      map(
@@ -22,7 +30,7 @@ export class RestapiService {
      )
 
     );
-  }
+  }*/
 
 
  
