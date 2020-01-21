@@ -20,7 +20,7 @@ export class LoginComponent implements OnInit {
     let resp= this.service.login(this.username,this.password);
     resp.subscribe(data=>{
       this.message=data;
-      console.log("****"+data); 
+      console.log("**login response**"+data); 
       let tokenStr= 'Bearer '+data;
       sessionStorage.setItem('token', tokenStr);
       sessionStorage.setItem('username',this.username);
