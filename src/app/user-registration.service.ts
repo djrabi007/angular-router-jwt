@@ -9,12 +9,21 @@ import { UserRegistration } from './UserRegistration';
 export class UserRegistrationService {
 
   constructor(private http113:HttpClient) { }
+
+  public doRegistration(userReg:UserRegistration){
+    let url="http://localhost:8081/register";
+    return this.http113.post(url,userReg
+      ,{responseType:'text' as 'json'});
+
+  } 
+
+/*
   public doRegistration(userReg:UserRegistration){
     let url="http://localhost:8082/registerRabi/register";
     return this.http113.post(url,userReg
       ,{responseType:'text' as 'json'});
 
-  }
+  }*/
   public getUsers(){
     let url="http://localhost:8082/registerRabi/allUsers";
     return this.http113.get(url);
