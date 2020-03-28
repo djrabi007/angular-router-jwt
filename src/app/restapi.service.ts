@@ -77,6 +77,18 @@ return this.http.post<any>(jwtURL,{username,password},{responseType:'text' as 'j
     return this.http.get(url);
   }
 
+  
+  /**
+   * 
+   * @param countryname  
+   * https://covid19-server.chrismichael.now.sh/api/v1/ReportsByCountries/India
+   */
+  public getCORONAUsersOfIndia(countryname:string) {
+    let url ="https://covid19-server.chrismichael.now.sh/api/v1/ReportsByCountries/"+countryname;
+   // alert(" url = "+url);
+    return this.http.get(url);
+}
+
 //TODO :Use Later
 logOut() {
   sessionStorage.removeItem('username');

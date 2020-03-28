@@ -11,6 +11,7 @@ import { SearchDeleteComponent } from './search-delete/search-delete.component';
 import { GarageComponentComponent } from './garage-component/garage-component.component';
 import { LoginComponent } from './login/login.component';
 import { PersonComponent } from './person/person.component';
+import { CoronaComponent } from './corona/corona.component';
 
 
 const routes: Routes = [
@@ -19,7 +20,8 @@ const routes: Routes = [
   {path:"login",component:LoginComponent},
   {path:"person",component:PersonComponent},
   {path:"register",component:RegistrationComponent},
-  {path:"home",component:HomeComponent}
+  {path:"home",component:HomeComponent},
+  {path:"corona",component:CoronaComponent}
 
 /*  
 {path:"",redirectTo:"/register",pathMatch:"full"},
