@@ -18,6 +18,7 @@ import { LoginComponent } from './login/login.component';
 import { PersonComponent } from './person/person.component';
 import { BasicAuthHttpInterceptorServiceService } from './basic-auth-http-interceptor-service.service';
 import { provideRoutes } from '@angular/router';
+import { CoronaComponent } from './corona/corona.component';
 
 @NgModule({
   declarations: [
@@ -32,7 +33,8 @@ import { provideRoutes } from '@angular/router';
     SearchDeleteComponent,
     GarageComponentComponent,
     LoginComponent,
-    PersonComponent
+    PersonComponent,
+    CoronaComponent
   ],
   imports: [
     BrowserModule,

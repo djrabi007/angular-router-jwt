@@ -1,0 +1,30 @@
+
+<img src="assets/img/Corona.JPG"> <br><br>
+<input type="text" name="countryname" [(ngModel)]="countryname" id="countryId" placeholder="countryname">
+<input type="button"  value="Country Name" (click)="getCoronaRR()" />
+
+<p></p>
+
+<!-- <img src=	"https://www.worldometers.info/img/flags/small/tn_in-flag.gif" alt="Girl in a jacket"> -->
+<img src="{{userLst.report.flag}}" />
+<table border="1">
+    <tr >
+        <th> Country</th>
+        <th> Case</th>
+        <th> Death</th>
+        <th> recovered</th>
+    </tr>
+    <!-- <tr *ngFor="let userR of userLst"> -->
+    <tr >
+        <td> {{userLst.report.country}}</td>
+        <td> {{userLst.report.cases}}</td>
+        <td> {{userLst.report.deaths}}</td>
+        <td> {{userLst.report.recovered}}</td>
+    </tr>
+
+</table>
+
+<font color="grey">** Supporting any country like India,US,France,Germany,Italy,China,Brazil,Australia etc.</font>
+
+<br>
+<font color="blue"> &#169; Contact me at rabi007007@gmail.com </font>
